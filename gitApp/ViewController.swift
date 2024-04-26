@@ -55,7 +55,7 @@ guard let self = self else { return }
     let decoder = JSONDecoder()
     let user = try decoder.decode(GitHubUser.self, from: data)
     DispatchQueue.main.async {
-        self.resultLabel.text = "Login: \(user.login)\nURL: \(user.url)\nCompany: \(user.company ?? "N/A")"
+        self.resultLabel.text = "Аккаунт Github: \(user.login)\nСайт: \(user.url)\nКомпания: \(user.company ?? "N/A")"
     }
     } catch {
         print("Error decoding JSON: \(error)")
